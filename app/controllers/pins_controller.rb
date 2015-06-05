@@ -1,20 +1,21 @@
 class PinsController < ApplicationController
   before_action :set_pin, only: [:show, :edit, :update, :destroy]
 
-  respond_to :html
+  # All respond_to ..... commands are not there in the video.
+  # respond_to :html
 
   def index
     @pins = Pin.all
-    respond_with(@pins)
+     # respond_with(@pins)
   end
 
   def show
-    respond_with(@pin)
+     # respond_with(@pin)
   end
 
   def new
     @pin = Pin.new
-    respond_with(@pin)
+     # respond_with(@pin)
   end
 
   def edit
@@ -22,18 +23,27 @@ class PinsController < ApplicationController
 
   def create
     @pin = Pin.new(pin_params)
-    @pin.save
-    respond_with(@pin)
+    if @pin.save
+      redirect_to @pin, notice: 'Pin was successfully created'
+    # respond_with(@pin)
+  else
+    render action: 'new'
+  end
   end
 
   def update
-    @pin.update(pin_params)
-    respond_with(@pin)
+    if @pin.update(pin_params)
+      redirect_to @pin, notice: 'Pin was successfully updated'
+    else 
+      render action: 'edit'
+     # respond_with(@pin)
   end
+end 
 
   def destroy
     @pin.destroy
-    respond_with(@pin)
+         # respond_with(@pin)
+         redirect_to pins_url
   end
 
   private
