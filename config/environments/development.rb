@@ -28,8 +28,9 @@ Rails.application.configure do
   config.assets.debug = true
 
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+  # in the video  { :host => 'localhost:3000'}
   # required for heroku
-  
+
   # Adds additional error checking when serving assets at runtime.
   # Checks for improperly declared sprockets dependencies.
   # Raises helpful error messages.
