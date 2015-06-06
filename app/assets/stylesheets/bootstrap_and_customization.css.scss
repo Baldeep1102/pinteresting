@@ -2,13 +2,16 @@
 
 $body-bg: #ecf0f1;
 $font-family-sans-serif: 'Lato','Helvetica Neue', Helvetica, Arial, sans-serif;
-$navbar-height: 45px;
-$navbar-default-bg: white;
-$navbar-default-brand-color: #c0392b;
-$brand-primary: #c0392b;
-$jumbotron-bg: white;
 
+$navbar-inverse-bg: #27ae60;
+$navbar-inverse-link-color: white;
+$brand-primary: #f39c12;
+$jumbotron-bg: #bdc3c7;
+@import 'bootstrap-sprockets';
 @import 'bootstrap';
+
+$navbar-height: 45px;
+
 
 .center {
  text-align: center;
