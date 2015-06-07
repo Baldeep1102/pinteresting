@@ -77,7 +77,7 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   # Note to set this to your actual host 
-  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+  config.action_mailer.default_url_options = { :host => 'https://wishly1102.herokuapp.com/'}
   # below sets paperclip to upload images to amazon s3
 config.paperclip_defaults = {
   :storage => :s3,
